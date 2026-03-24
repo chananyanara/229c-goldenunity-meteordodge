@@ -18,8 +18,6 @@ public class PlayerHealth : MonoBehaviour
 
             Debug.Log("HP: " + hp);
 
-            Destroy(collision.gameObject); 
-
             if (hp <= 0)
 
             {

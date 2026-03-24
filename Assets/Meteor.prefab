@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8026437090907713507}
   - component: {fileID: 3590967657935313261}
   - component: {fileID: 5847744594447584393}
+  - component: {fileID: 8559175849951140140}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Meteor
@@ -140,3 +141,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8559175849951140140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99152941779920884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d8a6a7137fb8147bf5e1561d95d143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Meteor
+  explosionEffect: {fileID: 5162910912013668194, guid: cf82839c411151342a7b2337bda9fb34, type: 3}
