@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Meteor
+  - pyramid
+  - plane
+  - Ground
   layers:
   - Default
   - TransparentFX
