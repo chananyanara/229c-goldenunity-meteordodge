@@ -12,7 +12,7 @@ public class MeteorSpawner : MonoBehaviour
 
     [Header("Spawn Area")]
 
-    public float spawnRadius = 15f;  // รัศมีสุ่มรอบตัวผู้เล่น (ปรับให้กว้างหรือแคบได้)
+    public float spawnRadius = 10f;  // รัศมีสุ่มรอบตัวผู้เล่น (ปรับให้กว้างหรือแคบได้)
 
     public float spawnHeight = 20f;  // ความสูงที่อุกกาบาตเริ่มตก
 

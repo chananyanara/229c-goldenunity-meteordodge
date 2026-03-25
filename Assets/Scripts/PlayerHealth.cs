@@ -4,13 +4,15 @@ public class PlayerHealth : MonoBehaviour
 
 {
 
-    public int hp = 5;
+    public int hp = 5; // ใช้ชื่อเดิมที่คุณต้องการ
+
+    private bool isDead = false;
 
     void OnCollisionEnter(Collision collision)
 
     {
 
-        if (collision.gameObject.CompareTag("Meteor"))
+        if (collision.gameObject.CompareTag("Meteor") && !isDead)
 
         {
 
@@ -34,9 +36,21 @@ public class PlayerHealth : MonoBehaviour
 
     {
 
-        Debug.Log("Game Over");
+        isDead = true;
 
-        Time.timeScale = 0f;
+        Debug.Log("Game Over Called");
+
+        // เรียกใช้ฟังก์ชัน EndGame จาก GameManager
+
+        GameManager gm = FindObjectOfType<GameManager>();
+
+        if (gm != null)
+
+        {
+
+            gm.EndGame(false); // false หมายถึงแพ้
+
+        }
 
     }
 
