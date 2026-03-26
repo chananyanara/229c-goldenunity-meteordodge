@@ -58,7 +58,7 @@ public class Meteor : MonoBehaviour
 
         // สูตร F_drag = -k * v (แรงต้านแปรผันตามความเร็วและทิศทางตรงกันข้าม)
 
-        Vector3 airDrag = -rb.velocity * airResistance;
+        Vector3 airDrag = -rb.linearVelocity * airResistance;
 
         rb.AddForce(airDrag);
 

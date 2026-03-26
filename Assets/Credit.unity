@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 46324916}
-  - component: {fileID: 46324915}
+  - component: {fileID: 46324917}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -136,18 +136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &46324915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46324914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53d287229c9558a448f37f60fa1eb6c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CreditManager
 --- !u!4 &46324916
 Transform:
   m_ObjectHideFlags: 0
@@ -163,6 +151,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &46324917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46324914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577abd54a9bf4b544bd8dfa1d90d6aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreditManager
 --- !u!1 &92440544
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 46324915}
+      - m_Target: {fileID: 46324917}
         m_TargetAssemblyTypeName: CreditManager, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1

@@ -6,7 +6,7 @@ public class MainMenuController : MonoBehaviour
     // ฟังก์ชันสำหรับกดไปหน้าเครดิต
     public void GoToCredits()
     {
-        // ใส่ชื่อ Scene เครดิตของคุณในเครื่องหมายคำพูด ""
+        
         SceneManager.LoadScene("Credit");
     }
 }

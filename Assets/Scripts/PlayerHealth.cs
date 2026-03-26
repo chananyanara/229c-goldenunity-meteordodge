@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
 
         // เรียกใช้ฟังก์ชัน EndGame จาก GameManager
 
-        GameManager gm = FindObjectOfType<GameManager>();
+        GameManager gm = FindFirstObjectByType<GameManager>();
 
         if (gm != null)
 

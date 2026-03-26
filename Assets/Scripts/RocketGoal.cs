@@ -18,7 +18,7 @@ public class RocketGoal : MonoBehaviour
 
             // เรียกใช้ GameManager เพื่อจบเกมแบบ "ชนะ" (true)
 
-            GameManager gm = FindObjectOfType<GameManager>();
+            GameManager gm = FindFirstObjectByType<GameManager>();
 
             if (gm != null)
 
