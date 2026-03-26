@@ -12,9 +12,9 @@ public class Meteor : MonoBehaviour
 
     public float gravity = 9.8f;        // ความเร่งโน้มถ่วง (m/s^2)
 
-    public float airResistance = 0.5f;  // ค่าสัมประสิทธิ์แรงต้านอากาศ (หัวข้อ E)
+    public float airResistance = 0.5f;  // ค่าสัมประสิทธิ์แรงต้านอากาศ
 
-    public float rotationForce = 10f;   // แรงบิดสำหรับการหมุน (หัวข้อ F)
+    public float rotationForce = 10f;   // แรงบิดสำหรับการหมุน 
 
     private Rigidbody rb;
 
@@ -24,7 +24,7 @@ public class Meteor : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
 
-        // --- หัวข้อ C: กฎข้อที่ 2 ของนิวตัน (F = ma) ---
+        // กฎข้อที่ 2 ของนิวตัน (F = ma) 
 
         // คำนวณแรงตกจากมวลและความเร่ง
 
@@ -32,9 +32,8 @@ public class Meteor : MonoBehaviour
 
         rb.AddForce(Vector3.down * force, ForceMode.Force);
 
-        // --- หัวข้อ F: การเคลื่อนที่แบบหมุน (Rotational Motion / Angular Velocity) ---
-
-        // ใช้ AddTorque เพื่อให้เกิดแรงบิดตามกฎฟิสิกส์ แทนการปรับมุมโดยตรง
+        // การเคลื่อนที่แบบหมุน (Rotational Motion / Angular Velocity) ---
+        
 
         Vector3 randomTorque = new Vector3(
 
@@ -54,7 +53,7 @@ public class Meteor : MonoBehaviour
 
     {
 
-        // --- หัวข้อ E: แรงต้านอากาศ (Air Resistance) ---
+        // แรงต้านอากาศ (Air Resistance) ---
 
         // สูตร F_drag = -k * v (แรงต้านแปรผันตามความเร็วและทิศทางตรงกันข้าม)
 
@@ -63,8 +62,6 @@ public class Meteor : MonoBehaviour
         rb.AddForce(airDrag);
 
     }
-
-    // ลบ Update() เดิมที่ใช้ transform.Rotate ออก เพราะเราใช้ AddTorque ใน Start แทนแล้ว
 
     void OnCollisionEnter(Collision collision)
 
@@ -84,11 +81,10 @@ public class Meteor : MonoBehaviour
 
                 GameObject effect = Instantiate(explosionEffect, transform.position, Quaternion.identity);
 
-                Destroy(effect, 2f); // ลบเอฟเฟกต์ทิ้งหลังจาก 2 วินาทีเพื่อคืนค่า Memory
+                Destroy(effect, 2f);
 
             }
-
-            // ทำลายอุกกาบาตลูกนี้
+            
 
             Destroy(gameObject);
 

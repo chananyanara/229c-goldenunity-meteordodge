@@ -8,7 +8,7 @@ public class RocketGoal : MonoBehaviour
 
     {
 
-        // เช็คว่าสิ่งที่มาชนคือ Player ใช่หรือไม่
+        
 
         if (other.CompareTag("Player"))
 
@@ -16,7 +16,7 @@ public class RocketGoal : MonoBehaviour
 
             Debug.Log("Reached the Rocket!");
 
-            // เรียกใช้ GameManager เพื่อจบเกมแบบ "ชนะ" (true)
+            
 
             GameManager gm = FindFirstObjectByType<GameManager>();
 
@@ -24,7 +24,7 @@ public class RocketGoal : MonoBehaviour
 
             {
 
-                gm.EndGame(true); // true = ชนะ (Mission Complete)
+                gm.EndGame(true);
 
             }
 

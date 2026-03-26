@@ -1,15 +1,15 @@
 using UnityEngine;
-using TMPro; // ใช้ TextMeshPro
+using TMPro; 
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
    [Header("UI Panels")]
-   public GameObject resultPanel; // หน้าจอตอนจบ (Win/Lose)
+   public GameObject resultPanel; 
    [Header("UI Display")]
-   public TextMeshProUGUI statusTxt; // โชว์ "MISSION COMPLETE / FAILED"
-   public TextMeshProUGUI scoreTxt;  // โชว์เวลา
-   public TextMeshProUGUI rankTxt;   // โชว์ฉายา
-   public TextMeshProUGUI announceTxt; // ประกาศกลางจอตอนเปลี่ยน Rank
+   public TextMeshProUGUI statusTxt; 
+   public TextMeshProUGUI scoreTxt;  
+   public TextMeshProUGUI rankTxt;  
+   public TextMeshProUGUI announceTxt; 
    private float timer = 0f;
    private bool isGameOver = false;
    private int lastRankUpdate = 0;
@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
    {
        if (isGameOver) return;
        timer += Time.deltaTime;
-       // ระบบฉายากลางจอ (เด้งทุก 10 วิ)
        int currentSec = Mathf.FloorToInt(timer);
        if (currentSec > 0 && currentSec % 10 == 0 && currentSec != lastRankUpdate)
        {
@@ -34,7 +33,7 @@ public class GameManager : MonoBehaviour
    public void EndGame(bool isWin)
    {
        isGameOver = true;
-       Time.timeScale = 0f; // หยุดเกม
+       Time.timeScale = 0f; 
        if (resultPanel != null)
        {
            resultPanel.SetActive(true);
