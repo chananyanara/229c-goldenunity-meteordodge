@@ -31,8 +31,6 @@ public class Meteor : MonoBehaviour
         float force = mass * gravity; 
 
         rb.AddForce(Vector3.down * force, ForceMode.Force);
-
-        // การเคลื่อนที่แบบหมุน (Rotational Motion / Angular Velocity) ---
         
 
         Vector3 randomTorque = new Vector3(
